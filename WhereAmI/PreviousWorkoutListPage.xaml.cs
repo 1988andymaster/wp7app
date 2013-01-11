@@ -21,7 +21,6 @@ namespace WhereAmI
         public PreviousWorkoutListPage()
         {
             InitializeComponent();
-            listBox1.ItemsSource = DataSaver<WorkoutDatabase>.loadDatabaseFromIsolatedStorage("WorkoutDatabase").getDatabase();
         }
 
         private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -36,7 +35,7 @@ namespace WhereAmI
         {
          //   if (MainPage.dataSave.getIsolatedStorageFile() != null)
         //    {
-            
+            listBox1.ItemsSource = DataSaver<WorkoutDatabase>.loadDatabaseFromIsolatedStorage("WorkoutDatabase").getDatabase();
              
          //   }
         //    System.Diagnostics.Debug.WriteLine("db & listbox updated");
